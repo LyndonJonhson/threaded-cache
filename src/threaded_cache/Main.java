@@ -8,6 +8,8 @@ public class Main {
 		
 		ArrayList<Integer> enderecos = LeituraArquivo.ler("enderecos.dat");
 		
+		System.out.println(Thread.currentThread().getName());
+		
 		Thread md = new Thread(new MapeamentoDireto(enderecos));
 		md.start();
 		
